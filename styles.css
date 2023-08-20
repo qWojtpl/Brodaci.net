@@ -1,0 +1,46 @@
+nav img {
+    margin-left: 50px;
+}
+
+body {
+    background-image: url("./images/L1W.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-nav {
+    backdrop-filter: blur(30px);
+}
+
+.shop-button {
+    background-color: #ff9800;
+    border: 1px solid #ff9800;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    margin-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.shop-button span {
+    margin-left: 5px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    color: white !important;
+}
+
+footer {
+    margin-top: 50% !important;
+    bottom: 0% !important;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    margin-left: 0px !important;
+}
