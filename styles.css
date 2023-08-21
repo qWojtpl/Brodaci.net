@@ -17,7 +17,7 @@ a {
 nav {
     backdrop-filter: blur(30px);
     width: 100%;
-    height: 18%;
+    height: fit-content;
     position: fixed;
     top: 0;
 }
@@ -47,7 +47,7 @@ nav {
     padding: 3px;
 }
 
-a span {
+.nav-container a span {
     background: 
         linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
         linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
@@ -58,7 +58,7 @@ a span {
     padding: 3px;   
 }
   
-a:hover > span, a:focus > span {
+.nav-container a:hover > span {
     background-size: 0 0.1em, 100% 0.1em;
 }
 
@@ -77,7 +77,7 @@ a:hover > span, a:focus > span {
 footer {
     position: static;
     bottom: 0;
-    margin-top: 100vh;
+    margin-top: 30vh;
     padding-top: 10px;
     padding-bottom: 40px;
     width: 100%;
@@ -102,4 +102,21 @@ footer a:hover {
 p.mojang-info {
     text-align: center;
     font-size: 12px;
+}
+
+#content {
+    margin-top: 10%;
+}
+
+#content-library {
+    display: none;
+}
+
+.content-container {
+    width: 80%;
+    margin-left: 10%;
+    background-color: white;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 3px;
+    padding: 12px;
 }

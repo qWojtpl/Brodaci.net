@@ -58,17 +58,50 @@ class ImagesManager {
 
 class ContentLoader {
 
+    #usingLoader;
+    #currentContent;
+
     constructor() {
-        let allButtons = document.querySelectorAll("a");
+        let allButtons = document.querySelectorAll("a[app-load-content]");
         for(let i = 0; i < allButtons.length; i++) {
-            if(allButtons[i].getAttribute("app-load-content") != null) {
-                allButtons[i].addEventListener("click", () => this.loadContent(allButtons[i].getAttribute("app-load-content")));
-            }
+            allButtons[i].addEventListener("click", () => {
+                this.loadContent(allButtons[i].getAttribute("app-load-content"));
+            });
         }
     }
 
-    loadContent(contentName) {
-        console.log(contentName);
+    async loadContent(contentName) {
+        if(this.#usingLoader || this.#currentContent == contentName) {
+            return false;
+        }
+        this.setCurrentContent(contentName);
+        console.log("Loading content: " + contentName);
+        document.getElementById("content").style.opacity = 0;
+        if(document.getElementById("content-" + contentName) == null) {
+            return false;
+        }
+        this.setUsingLoader(true);
+        document.getElementById("content").innerHTML = document.getElementById("content-" + contentName).innerHTML;
+        let b = 0;
+        let clazz = this;
+        let timer = setInterval(function() {
+            if(b >= 1) {
+                clearInterval(timer);
+                clazz.setUsingLoader(false);
+                return true;
+            }
+            b += 0.01;
+            console.log(b);
+            document.getElementById("content").style.opacity = b;
+        }, 10);
+    }
+
+    setUsingLoader(state) {
+        this.#usingLoader = state;
+    }
+
+    setCurrentContent(contentName) {
+        this.#currentContent = contentName;
     }
 
 }
