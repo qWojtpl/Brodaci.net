@@ -2,14 +2,9 @@
 class BrodaciPage {
 
     static #instance;
-    #imagesManager;
-    #backgroundLoader;
     #contentLoader;
 
     startApp() {
-        this.#imagesManager = new ImagesManager();
-        this.#imagesManager.load("S3.png");
-        this.#backgroundLoader = new BackgroundLoader();
         this.#contentLoader = new ContentLoader();
     }
 
@@ -21,37 +16,8 @@ class BrodaciPage {
         this.#instance = instance;
     }
 
-    getImagesManager() {
-        return this.#imagesManager;
-    }
-
-    getBackgroundLoader() {
-        return this.#backgroundLoader;
-    }
-
     getContentLoader() {
         return this.#contentLoader;
-    }
-
-}
-
-class BackgroundLoader {
-
-    async swapAsync(resourceName) {
-        let body = document.querySelector("body");
-        body.style.backgroundImage = "url(./images/" + resourceName + ")";
-    }
-
-}
-
-class ImagesManager {
-
-    #images = [];
-
-    load(resourceName) {
-        let img = new Image();
-        img.src = "./images/" + resourceName;
-        this.#images[this.#images.length] = img;
     }
 
 }
@@ -77,22 +43,25 @@ class ContentLoader {
         this.setCurrentContent(contentName);
         console.log("Loading content: " + contentName);
         document.getElementById("content").style.opacity = 0;
-        if(document.getElementById("content-" + contentName) == null) {
-            return false;
-        }
         this.setUsingLoader(true);
-        document.getElementById("content").innerHTML = document.getElementById("content-" + contentName).innerHTML;
-        let b = 0;
+        $.ajax({
+            type: "GET",
+            url: "./contents/rules.html",
+            async: true,
+            success : function(data) {
+                document.getElementById("content").innerHTML = data;
+            }
+        });
+        let o = 0;
         let clazz = this;
         let timer = setInterval(function() {
-            if(b >= 1) {
+            if(o >= 1) {
                 clearInterval(timer);
                 clazz.setUsingLoader(false);
                 return true;
             }
-            b += 0.01;
-            console.log(b);
-            document.getElementById("content").style.opacity = b;
+            o += 0.01;
+            document.getElementById("content").style.opacity = o;
         }, 10);
     }
 

@@ -2,10 +2,11 @@
 
 body {
     margin: 0;
-    background-image: url("./images/L1W.png");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-image: url(./images/L1W.png);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -44,6 +45,7 @@ nav {
     display: table-cell;
     vertical-align: middle;
     width: 100px;
+    max-width: 130px;
     padding: 3px;
 }
 
@@ -55,7 +57,14 @@ nav {
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
-    padding: 3px;   
+    padding: 3px;
+    padding-bottom: 6px;   
+    width: 90%;
+    display: block;
+    color: bold;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-wrap: nowrap;
 }
   
 .nav-container a:hover > span {
@@ -63,6 +72,7 @@ nav {
 }
 
 .nav-container a:nth-child(10) > span {
+    width: auto;
     background: none;
     color: white;
     background-color: #ff8000;
@@ -72,6 +82,8 @@ nav {
     padding-bottom: 15px;
     padding-left: 25px;
     padding-right: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 footer {
