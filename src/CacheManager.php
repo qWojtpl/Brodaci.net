@@ -20,7 +20,7 @@
 
         public static function getCached($contentName) {
             CacheManager::loadMap();
-            return "CACHED".file_get_contents("./cache/".CacheManager::$cache_map[$contentName]);
+            return file_get_contents("./cache/".CacheManager::$cache_map[$contentName]);
         }
 
         public static function createCache($contentName, $content) {
