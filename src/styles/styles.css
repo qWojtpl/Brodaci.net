@@ -56,6 +56,7 @@ nav a {
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
+    width: 6vw;
 }
 
 nav #shop-button > span {
@@ -125,8 +126,8 @@ header {
 
 .black-panel h1 {
     font-size: 4vw;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 2.96vw;
+    padding-right: 2.96vw;
     padding-top: 2.9vh;
     color: #00D2FF;
     text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.75);
@@ -149,6 +150,7 @@ header {
     padding: 0;
     width: 100%;
     padding-top: 1vh;
+    display: inline-block;
 }
 
 .black-panel:last-child span.circle-span {
@@ -163,22 +165,76 @@ header {
     border-radius: 50%;
     padding: 0;
     display: inline-block;
+    background-size: 4vw;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-table.nine-panels {
+.black-panel span.circle img {
+    width: 4vw;
+    margin-left: 0.5vw;
+    margin-top: 0.5vw;
+    filter: drop-shadow(0px 4px 4px #000000);
+    transition: .3s;
+}
+
+.black-panel span.circle img:hover {
+    width: 4.5vw;
+    margin-left: 0.25vw;
+    margin-top: 0.25vw;
+}
+
+table.blue-panels {
     width: 90vw;
     margin-left: 5vw;
     border-spacing: 1vw;
 }
 
-table.nine-panels td {
+table.blue-panels td {
     background-color: #00D2FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2.6vw;
     width: 20vw;
-    height: 30vh;
+    height: 32vh;
 }
 
-table.nine-panels tr {
-    margin-bottom: 20vh;
+.blue-panel {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+div.blue-panel-image {
+    width: 30%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+div.blue-panel-image img {
+    width: 90%;
+    margin: 0;
+}
+
+div.blue-panel-content {
+    width: 70%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+div.blue-panel-content h1 {
+    color: #FAFF00;
+    text-shadow: -2px 2px 3px #000000;
+    font-size: 1.8vw;
+}
+
+div.blue-panel-content span {
+    color: white;
+    text-shadow: -2px 2px 2px #000000;
+    font-size: 1.3vw;
 }
 
 footer {
