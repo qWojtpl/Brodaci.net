@@ -195,7 +195,7 @@ table.blue-panels td {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
     border-radius: 2.6vw;
     width: 20vw;
-    height: 32vh;
+    height: fit-content;
 }
 
 .blue-panel {
@@ -207,13 +207,14 @@ table.blue-panels td {
 
 div.blue-panel-image {
     width: 30%;
-    margin-top: 10%;
+    margin-top: 2%;
     text-align: center;
 }
 
 div.blue-panel-image img {
     width: 130%;
     margin: 0;
+    filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 div.blue-panel-content {
@@ -223,18 +224,121 @@ div.blue-panel-content {
     text-align: center;
     padding-left: 1vw;
     padding-right: 1vw;
+    padding-bottom: 1vw;
 }
 
 div.blue-panel-content h1 {
     color: #FAFF00;
     text-shadow: -2px 2px 3px #000000;
     font-size: 1.8vw;
+    margin-bottom: 1vh;
 }
 
 div.blue-panel-content span {
     color: white;
     text-shadow: -2px 2px 2px #000000;
     font-size: 1.3vw;
+}
+
+div.gray-card {
+    width: 70vw;
+    height: 30vh;
+    background: rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2.6vw;
+    margin-left: 15vw;
+    margin-bottom: 10vh;
+    display: flex;
+} 
+
+div.gray-card-image {
+    width: 30vw;
+    border-radius: 2.6vw;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.5), inset 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0.3vw solid #747474;
+}
+
+div.gray-card-content {
+    width: 30vw;
+    font-size: 1.2vw;
+    color: white;
+    text-shadow: -2px 2px 4px #000000;
+    margin-left: 2vw;
+}
+
+div.gray-card-content h2 {
+    font-size: 2.3vw;
+    color: #00D2FF;
+    text-shadow: -2px 2px 3px #000000;
+    margin: 0;
+    margin-top: 2vh;
+    text-transform: uppercase;
+}
+
+button.gray-card-button {
+    width: 10vw;
+    height: 10vh;
+    margin-top: 18vh;
+    margin-right: 1vw;
+    color: white;
+    background-color: #00D2FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 14.5vw;
+    font-size: 1.3vw;
+    text-shadow: -2px 2px 3px #000000;
+    text-wrap: nowrap;
+}
+
+div.move-card {
+    display: flex;
+    width: 80vw;
+    height: 60vh;
+    margin-left: 10vw;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2.6vw;
+}
+
+div.move-card-content {
+    width: 50vw;
+    text-shadow: -2px 2px 4px #000000;
+    font-size: 1.5vw;
+    color: white;
+    margin-left: 3vw;
+}
+
+div.move-card-content h1 {
+    text-shadow: -2px 2px 3px #000000;
+    font-size: 2.6vw;
+    color: #00D2FF;
+}
+
+div.move-card-image {
+    width: 30vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.move-cards-buttons {
+    width: 70vw;
+    margin-left: 15vw;
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+div.move-card-button {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background: #00D2FF;
+    transition: .1s;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
 }
 
 footer {
@@ -248,6 +352,10 @@ footer {
     height: fit-content;
     border-radius: 25px 25px 0px 0px;
     background-color: white;
+}
+
+footer img {
+    width: 8vw;
 }
 
 footer table {
@@ -264,5 +372,5 @@ footer a:hover {
 
 p.mojang-info {
     text-align: center;
-    font-size: 12px;
+    font-size: 0.8vw;
 }
