@@ -2,11 +2,11 @@
 const cards = document.getElementsByClassName("move-card");
 const buttons = document.getElementsByClassName("move-card-button");
 
+let cardIndex = 0;
+let blocked = false;
+
 hideAllCards();
 selectCard(buttons[0]);
-
-let blocked = false;
-let cardIndex = 0;
 
 let update = setInterval(() => {
     if(cardIndex == buttons.length) {
@@ -43,6 +43,7 @@ function selectCard(element, manual) {
             index = i;
         }
     }
+    cardIndex = index;
     element.style.borderRadius = "3vw";
     element.style.width = "6vw";
     hideAllCards();

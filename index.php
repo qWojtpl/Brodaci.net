@@ -2,7 +2,13 @@
 
     include("./src/PageManager.php");
 
-    PageManager::setContent("index");
+    $content = "index";
+
+    if(isset($_GET["c"])) {
+        $content = $_GET["c"];
+    }
+
+    PageManager::setContent($content);
     PageManager::build();
 
 ?>

@@ -3,25 +3,31 @@
         <title>Brodaci.net - Strona główna</title>
         <link rel="stylesheet" href="./src/styles/styles.css">
         <meta charset="UTF-8">
+        <script>
+          let contentName = "index";
+          contentName = contentName.replace(";", "/");
+          window.history.replaceState(null, document.title, "./" + contentName);
+        </script>
     </head>
     <body>
         <nav>
             <img src="./src/assets/logo_biale.png">
             <div id="nav-buttons">
-                <a>Główna</a>
-                <a>Tryby</a>
-                <a>Głosowanie</a>
-                <a>Administracja</a>
-                <a>Regulamin</a>
-                <a>Kontakt</a>
+                <a href="./">Główna</a>
+                <a href="./modes">Tryby</a>
+                <a href="./voting">Głosowanie</a>
+                <a href="./staff">Administracja</a>
+                <a href="./rules">Regulamin</a>
+                <a href="./contact">Kontakt</a>
                 <a id="shop-button">
                     <span>Sklep</span>
                 </a>
             </div>
         </nav>
-        <div id="background"></div>
+        <div id="background" style="background-image:url('./src/assets/L1W.png')"></div>
         <div id="content">
             
+
 
 <section>
     <table class="first-panels">
@@ -236,7 +242,7 @@
                     Jeśli masz jakiś problem techniczny nie tylko na serwerze ale również na naszym Discordzie i TeamSpeaku pisz właśnie do niego!
                 </span>
             </div>
-            <div class="move-card-image" style="background-image: url(./src/assets/piter.png)"></div>
+            <div class="move-card-image" style="background-image: url(./src/assets/assasin.png)"></div>
         </div>
         <div class="move-card">
             <div class="move-card-content">
@@ -246,7 +252,7 @@
                     To nie wszystko, zarządza fanpagem na Facebooku, Tik Tokiem oraz kanłem informacyjnym na YouTubie. Jeśli masz pomysł na rozwój serwera, dodanie czegoś, coś Ci nie pasuje lub uważasz, że wymaga zmiany a może masz pomysł na Tik Toka albo film to koniecznie napisz do niego! 
                 </span>
             </div>
-            <div class="move-card-image" style="background-image: url(./src/assets/piter.png)"></div>
+            <div class="move-card-image" style="background-image: url(./src/assets/dasikor.png)"></div>
         </div>
         <div class="move-card">
             <div class="move-card-content">
@@ -256,7 +262,7 @@
                     Chcesz coś zbudować? Stworzyłeś wyjątkowy projekt? Potrzebujesz pomocy budowlano-estetycznej? Ozzy jest osobą, do której musisz się odezwać!
                 </span>
             </div>
-            <div class="move-card-image" style="background-image: url(./src/assets/piter.png)"></div>
+            <div class="move-card-image" style="background-image: url(./src/assets/ozzy.png)"></div>
         </div>
         <div class="move-card">
             <div class="move-card-content">
@@ -267,7 +273,7 @@
                     Masz pomysł na rozwój mediów społecznościowych, pisz do nich!
                 </span>
             </div>
-            <div class="move-card-image" style="background-image: url(./src/assets/piter.png)"></div>
+            <div class="move-card-image" style="background-image: url(./src/assets/three.png);background-size:contain;margin-top:7vh;"></div>
         </div>
     </div>
     <div class="move-cards-buttons">
@@ -276,6 +282,9 @@
         <div class="move-card-button"></div>
         <div class="move-card-button"></div>
         <div class="move-card-button"></div>
+        <div class="move-card-button-end">
+            <span>Przejdź do pełnej listy administracji</span>
+        </div>
     </div>
 </section>
 
@@ -291,10 +300,10 @@
                 </td>
                 <td>
                   <h5>Informacje</h5>
-                  <a href="#">Home</a><br>
-                  <a href="#">Features</a><br>
-                  <a href="#">Pricing</a><br>
-                  <a href="#">FAQs</a>
+                  <a href="#">Tryby</a><br>
+                  <a href="#">Regulamin</a><br>
+                  <a href="#">Administracja</a><br>
+                  <a href="#">Kontakt</a>
                 </td>
                 <td>
                   <h5>Śledź nas</h5>

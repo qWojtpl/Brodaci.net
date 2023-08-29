@@ -1,12 +1,10 @@
 <html>
     <head>
-        <title>Brodaci.net - @pageTitle</title>
+        <title>Brodaci.net - Tryby</title>
         <link rel="stylesheet" href="./src/styles/styles.css">
         <meta charset="UTF-8">
         <script>
-          let contentName = "@contentName";
-          contentName = contentName.replace(";", "/");
-          window.history.replaceState(null, document.title, "./" + contentName);
+          window.history.replaceState(null, document.title, "./modes")
         </script>
     </head>
     <body>
@@ -24,9 +22,14 @@
                 </a>
             </div>
         </nav>
-        <div id="background" style="background-image:url('./src/assets/@backgroundImage')"></div>
+        <div id="background" style="background-image:url('./src/assets/grass.png')"></div>
         <div id="content">
-            @pageContent
+            
+
+
+<section>
+    <header>Dostępne tryby</header>
+</section>
         </div>
         <footer>
             <table>

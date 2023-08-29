@@ -9,10 +9,22 @@ body {
     margin: 0;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
 #background {
     width: 98.9vw;
     height: 100vh;
-    background-image: url("../assets/L1W.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
@@ -55,7 +67,6 @@ nav a {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    text-decoration: none;
     width: 6vw;
 }
 
@@ -78,8 +89,8 @@ header {
     font-size: 5.2vw;
     text-align: center;
     color: white;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
     text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
@@ -90,17 +101,21 @@ header {
 .first-panels {
     margin-left: 5vw;
     width: 90vw;
-    height: 35vh;
+}
+
+.first-panels tbody tr {
+    height: fit-content;
 }
 
 .first-panels tbody tr td:nth-child(1) {
     width: 30vw;
     vertical-align: top;
+    height: 1px;
 }
 
 .first-panels tbody tr td:nth-child(2) {
     width: 1vw;
-    height: 100%;
+    height: 1vh;
 }
 
 .first-panels tbody tr td:nth-child(2) > div {
@@ -114,14 +129,14 @@ header {
 .first-panels tbody tr td:nth-child(3) {
     width: 60vw;
     vertical-align: top;
+    height: 1px;
 }
 
 .black-panel {
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 50px 15px rgba(0, 0, 0, 0.25);
     border-radius: 2.5vw;
-    min-height: 75vh;
-    height: fit-content;
+    height: 100%;
 }
 
 .black-panel h1 {
@@ -195,7 +210,7 @@ table.blue-panels td {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
     border-radius: 2.6vw;
     width: 20vw;
-    height: fit-content;
+    height: 17vw;
 }
 
 .blue-panel {
@@ -207,7 +222,7 @@ table.blue-panels td {
 
 div.blue-panel-image {
     width: 30%;
-    margin-top: 2%;
+    margin-top: 3vw;
     text-align: center;
 }
 
@@ -242,12 +257,12 @@ div.blue-panel-content span {
 
 div.gray-card {
     width: 70vw;
-    height: 30vh;
+    height: 15vw;
     background: rgba(0, 0, 0, 0.34);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
     border-radius: 2.6vw;
     margin-left: 15vw;
-    margin-bottom: 10vh;
+    margin-bottom: 5vw;
     display: flex;
 } 
 
@@ -273,14 +288,14 @@ div.gray-card-content h2 {
     color: #00D2FF;
     text-shadow: -2px 2px 3px #000000;
     margin: 0;
-    margin-top: 2vh;
+    margin-top: 1vw;
     text-transform: uppercase;
 }
 
 button.gray-card-button {
     width: 10vw;
-    height: 10vh;
-    margin-top: 18vh;
+    height: 5vw;
+    margin-top: 9vw;
     margin-right: 1vw;
     color: white;
     background-color: #00D2FF;
@@ -294,7 +309,7 @@ button.gray-card-button {
 div.move-card {
     display: flex;
     width: 80vw;
-    height: 60vh;
+    height: 30vw;
     margin-left: 10vw;
     background: rgba(255, 255, 255, 0.75);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
@@ -328,6 +343,7 @@ div.move-cards-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 3vw;
 }
 
@@ -341,10 +357,31 @@ div.move-card-button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
 }
 
+div.move-card-button-end {
+    display: table;
+    color: white;
+    width: fit-content;
+    height: 4vw;
+    text-align: center;
+    border-radius: 3vw;
+    background: #00D2FF;
+    transition: .1s;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-shadow: -2px 2px 3px #000000;
+}
+
+div.move-card-button-end > span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 footer {
     position: relative;
     bottom: 0;
-    margin-top: 30vh;
+    margin-top: 15vw;
     padding-top: 10px;
     padding-bottom: 40px;
     width: 100%;
