@@ -110,12 +110,11 @@ header {
 .first-panels tbody tr td:nth-child(1) {
     width: 30vw;
     vertical-align: top;
-    height: 1px;
 }
 
 .first-panels tbody tr td:nth-child(2) {
     width: 1vw;
-    height: 1vh;
+    height: 29.7vw;
 }
 
 .first-panels tbody tr td:nth-child(2) > div {
@@ -129,7 +128,15 @@ header {
 .first-panels tbody tr td:nth-child(3) {
     width: 60vw;
     vertical-align: top;
-    height: 1px;
+    height: 29.7vw;
+}
+
+@-moz-document url-prefix() {
+    .first-panels tbody tr td:nth-child(3) {
+        width: 60vw;
+        vertical-align: top;
+        height: 100%;
+    }
 }
 
 .black-panel {
@@ -161,11 +168,14 @@ header {
     text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.75);
 }
 
+.first-panels tbody tr td:nth-child(1) div span {
+    font-size: 1.7vw;
+}
+
 .black-panel span.circle-span {
     padding: 0;
     width: 100%;
     padding-top: 1vh;
-    display: inline-block;
 }
 
 .black-panel:last-child span.circle-span {
@@ -175,18 +185,19 @@ header {
 .black-panel span.circle {
     vertical-align: middle;
     background-color: #00D2FF;
-    width: 5vw;
-    height: 5vw;
+    width: 4.5vw;
+    height: 4.5vw;
     border-radius: 50%;
     padding: 0;
     display: inline-block;
     background-size: 4vw;
     background-repeat: no-repeat;
     background-position: center;
+    margin-right: 0.75vw;
 }
 
 .black-panel span.circle img {
-    width: 4vw;
+    width: 3.5vw;
     margin-left: 0.5vw;
     margin-top: 0.5vw;
     filter: drop-shadow(0px 4px 4px #000000);
@@ -194,7 +205,7 @@ header {
 }
 
 .black-panel span.circle img:hover {
-    width: 4.5vw;
+    width: 4vw;
     margin-left: 0.25vw;
     margin-top: 0.25vw;
 }
