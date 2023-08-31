@@ -7,28 +7,76 @@
             <td>
                 <div class="black-panel">
                     <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/ip.png"></span>
-                        Adres IP: brodaci.net
+                        <div class="tooltip copyable" onclick="copy('brodaci.net');">
+                            <span class="circle"><img src="./src/assets/ip.png"></span>
+                            Adres IP: brodaci.net
+                            <div class="tooltip-text">
+                                <span>Kliknij, aby skopiować!</span>
+                            </div>
+                        </div>
                     </span>
                     <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/web.png"></span>
-                        150 graczy online
+                        <div class="tooltip">
+                            <span class="circle"><img src="./src/assets/web.png"></span>
+                            150 graczy online
+                            <div class="tooltip-text">
+                                <span>Survival: 10</span>
+                                <span>Easy: 20</span>
+                            </div>
+                        </div>
                     </span>
                     <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/block.png"></span>
-                        Wersje 1.19.1-1.19.4
+                        <div class="tooltip">
+                            <span class="circle"><img src="./src/assets/block.png"></span>
+                            Wersje: 1.19.1-1.19.4
+                            <div class="tooltip-text">
+                                <span>Serwer działa na tych wersjach.</span>
+                            </div>
+                        </div>
                     </span>
                     <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/discord.png"></span>
-                        Discord
+                        <a href="https://discord.com/invite/FmkCKJK" target="_blank">
+                            <div class="tooltip">
+                                <span class="circle"><img src="./src/assets/discord.png"></span>
+                                Discord
+                                <div class="tooltip-text">
+                                    <span>Kliknij, aby dołączyć!</span>
+                                </div>
+                            </div>
+                        </a>
                     </span>
                     <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/teamspeak.png"></span>
-                        Teamspeak 3
+                        <a href="ts3server://ts.brodaci.net" target="_blank">
+                            <div class="tooltip">
+                                <span class="circle"><img src="./src/assets/teamspeak.png"></span>
+                                Teamspeak 3
+                                <div class="tooltip-text">
+                                    <span>Kliknij, aby dołączyć!</span>
+                                </div>
+                            </div>
+                        </a>
                     </span>
                     <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/tiktok.png"></span>
-                        TikTok
+                        <a href="https://www.facebook.com/brodacinet" target="_blank">
+                            <div class="tooltip">
+                                <span class="circle"><img src="./src/assets/facebook.png"></span>
+                                Facebook
+                                <div class="tooltip-text">
+                                    <span>Kliknij, aby przejść!</span>
+                                </div>
+                            </div>
+                        </a>
+                    </span>
+                    <span class="circle-span">
+                        <a href="https://www.tiktok.com/@mc.brodaci.net" target="_blank">
+                            <div class="tooltip">
+                                <span class="circle"><img src="./src/assets/tiktok.png"></span>
+                                TikTok
+                                <div class="tooltip-text">
+                                    <span>Kliknij, aby przejść!</span>
+                                </div>
+                            </div>
+                        </a>
                     </span>
                 </div>
             </td>
@@ -261,3 +309,4 @@
 </section>
 
 <script src="./src/scripts/move-cards.js"></script>
+<script src="./src/scripts/copy.js"></script>

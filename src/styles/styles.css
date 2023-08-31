@@ -204,10 +204,20 @@ header {
     transition: .3s;
 }
 
-.black-panel span.circle img:hover {
+.black-panel span.circle-span:hover > .tooltip span.circle img  {
     width: 4vw;
     margin-left: 0.25vw;
     margin-top: 0.25vw;
+}
+
+.black-panel span.circle-span a:hover > .tooltip span.circle img  {
+    width: 4vw;
+    margin-left: 0.25vw;
+    margin-top: 0.25vw;
+}
+
+.black-panel span.circle-span a {
+    color: white;
 }
 
 table.blue-panels {
@@ -390,7 +400,6 @@ div.move-card-button-end > span {
 }
 
 footer {
-    position: relative;
     bottom: 0;
     margin-top: 15vw;
     padding-top: 10px;
@@ -400,6 +409,15 @@ footer {
     height: fit-content;
     border-radius: 25px 25px 0px 0px;
     background-color: white;
+    font-size: 1.5vw;
+}
+
+footer div#footer-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
 }
 
 footer img {
@@ -421,4 +439,50 @@ footer a:hover {
 p.mojang-info {
     text-align: center;
     font-size: 0.8vw;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 15vw;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5vh;
+    padding: 0.3vh 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 30%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip {
+    width: 100%;
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.copyable {
+    cursor: pointer;
 }

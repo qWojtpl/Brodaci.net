@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Brodaci.net - @pageTitle</title>
@@ -8,6 +9,8 @@
           contentName = contentName.replace(";", "/");
           window.history.replaceState(null, document.title, "./" + contentName);
         </script>
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     </head>
     <body>
         <nav>
@@ -29,32 +32,29 @@
             @pageContent
         </div>
         <footer>
-            <table>
-              <tr>
-                <td>
-                  <a href="/">
-                    <img src="./src/assets/logo_czarne.png">
-                  </a>
-                </td>
-                <td>
-                  <h5>Informacje</h5>
-                  <a href="#">Tryby</a><br>
-                  <a href="#">Regulamin</a><br>
-                  <a href="#">Administracja</a><br>
-                  <a href="#">Kontakt</a>
-                </td>
-                <td>
-                  <h5>Śledź nas</h5>
-                  <a href="#">TikTok</a><br>
-                  <a href="#">Facebook</a><br>
-                  <a href="#">Discord</a><br>
-                  <a href="#">Instagram</a>
-                </td>
-              </tr>
-            </table>
-            <br>
-            <p class="mojang-info">PL - Serwer Brodaci.net nie jest w żaden sposób powiązany z firmą Mojang i Microsoft. Serwer nie jest wspierany przez Mojang i Microsoft. Dochody ze sklepu przekazywane są na rzecz właściciela serwisu w celu utrzymania serwera.</p>
-            <p class="mojang-info">EN - Brodaci.net server is not associated with Mojang and Microsoft in any way. Server is not supported by Mojang and Microsoft. Income from the store is transferred to the service owner to maintain the server.</p>
-          </footer>
+          <div id="footer-info">
+            <div>
+              <a href="/">
+                <img src="./src/assets/logo_czarne.png">
+            </div>
+            <div>
+              <h5>Informacje</h5>
+              <a href="./modes">Tryby</a><br>
+              <a href="./staff">Administracja</a><br>
+              <a href="./rules">Regulamin</a><br>
+              <a href="./contact">Kontakt</a>
+            </div>
+            <div>
+              <h5>Śledź nas</h5>
+              <a href="https://discord.com/invite/FmkCKJK" target="_blank">Discord</a><br>
+              <a href="ts3server://ts.brodaci.net" target="_blank">Teamspeak 3</a><br>
+              <a href="https://www.facebook.com/brodacinet" target="_blank">Facebook</a><br>
+              <a href="https://www.tiktok.com/@mc.brodaci.net" target="_blank">TikTok</a>
+            </div>
+          </div>
+          <br>
+          <p class="mojang-info">PL - Serwer Brodaci.net nie jest w żaden sposób powiązany z firmą Mojang i Microsoft. Serwer nie jest wspierany przez Mojang i Microsoft. Dochody ze sklepu przekazywane są na rzecz właściciela serwisu w celu utrzymania serwera.</p>
+          <p class="mojang-info">EN - Brodaci.net server is not associated with Mojang and Microsoft in any way. Server is not supported by Mojang and Microsoft. Income from the store is transferred to the service owner to maintain the server.</p>
+        </footer>
     </body>
 </html>

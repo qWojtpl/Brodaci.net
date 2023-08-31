@@ -13,7 +13,8 @@ let update = setInterval(() => {
         cardIndex = 0;
     }
     if(!blocked) {
-        selectCard(buttons[cardIndex++], false);
+        selectCard(buttons[cardIndex], false);
+        cardIndex++;
     } else {
         blocked = false;
     }
