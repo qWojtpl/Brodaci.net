@@ -45,6 +45,7 @@ nav {
     text-transform: uppercase;
     font-size: 1.8vw;
     color: black;
+    z-index: 2;
 }
 
 nav img {
@@ -56,7 +57,7 @@ nav img {
 
 #nav-buttons {
     display: table;
-    table-layout:auto;
+    table-layout: auto;
     position: absolute;
     width: 82vw;
     left: 18vw;
@@ -84,6 +85,82 @@ nav #shop-button > span {
     font-size: 2.1vw;
 }
 
+.burger {
+    display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1200px) {
+
+    nav.opened {
+        text-align: center;
+        height: 100vh;
+        background-color: white;
+    }
+
+    #nav-image {
+        width: 100vw;
+        height: 13vw;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    nav img {
+        position: relative;
+        margin-left: 46.75vw;
+        left: 0;
+    }
+
+    nav.opened img {
+        position: relative !important;
+        left: 0 !important; 
+        margin-left: 0;
+    }
+
+    #nav-buttons {
+        display: none;
+    }
+
+    nav.opened #nav-buttons {
+        display: block;
+        left: 0;
+    }
+
+    nav.opened a {
+        display: block;
+        width: 100vw;
+        margin-bottom: 5vh;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        background-color: black;
+        right: 2vw;
+        width: 5vh;
+        height: 5vh;
+        top: 4vh;  
+    }
+
+    .burger-cross {
+        display: none;
+        position: absolute;
+        background-color: red;
+        right: 2vw;
+        width: 5vh;
+        height: 5vh;
+        top: 4vh;
+    }
+
+    nav.opened .burger {
+        display: none;
+    }
+
+    nav.opened .burger-cross {
+        display: block;
+    }
+
+}
+
 header {
     text-transform: uppercase;
     font-size: 5.2vw;
@@ -92,6 +169,11 @@ header {
     margin-top: 5vw;
     margin-bottom: 5vw;
     text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+
+header.header-left {
+    text-align: left;
+    margin-left: 6vw;
 }
 
 #content {
@@ -112,12 +194,12 @@ header {
     vertical-align: top;
 }
 
-.first-panels tbody tr td:nth-child(2) {
+td.td-line {
     width: 1vw;
     height: 29.7vw;
 }
 
-.first-panels tbody tr td:nth-child(2) > div {
+td.td-line > div {
     width: 0.25vw;
     height: 100%;
     margin-left: 0.355vw;
@@ -234,7 +316,7 @@ table.blue-panels td {
     height: 17vw;
 }
 
-.blue-panel {
+div.blue-panel {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -327,6 +409,19 @@ button.gray-card-button {
     text-wrap: nowrap;
 }
 
+div.big-gray-card .gray-card-content {
+    width: 38vw;
+    text-align: center;
+}
+
+div.big-gray-card .gray-card-content h2 {
+    font-size: 3.6vw;
+}
+
+div.big-gray-card .gray-card-content span {
+    font-size: 2.5vw;
+}
+
 div.move-card {
     display: flex;
     width: 80vw;
@@ -399,7 +494,83 @@ div.move-card-button-end > span {
     vertical-align: middle;
 }
 
+div#blue-info-container {
+    width: 24vw;
+}
+
+div.blue-info {
+    background-color: #00D2FF;
+    border-radius: 2.3vw;
+    height: 8svw;
+    color: #FAFF00;
+    text-shadow: -2px 2px 3px #000000;
+    font-size: 3.2vw;
+    text-align: center;
+    padding: 3vw;
+    padding-top: 1.5vw;
+    text-transform: uppercase;
+    margin-bottom: 2vw;
+}
+
+div.big-panel table {
+    margin-left: 6vw;
+}
+
+div.big-panel table tbody tr td {
+    vertical-align: top;
+}
+
+div.white-content-panel {
+    width: 55vw;
+    padding: 3vw;
+    padding-top: 1.5vw;
+    height: fit-content;
+    color: black;
+    font-size: 1.8vw;
+    background: rgba(236, 236, 236, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 3vw;
+    margin-bottom: 3vw;
+}
+
+div.white-content-panel h1 {
+    margin-top: 0;
+    color: #00D2FF;
+    text-shadow: -2px 2px 3px #000000;
+}
+
+div.ranks-info-container {
+    margin-top: 3vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.ranks-info {
+    position: absolute;
+    width: 15vw;
+    height: fit-content;
+    padding: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    background-color: #00D2FF;
+    color: white;
+    text-align: center;
+    text-wrap: nowrap;
+    border-radius: 3vw;
+    left: 10vw;
+    margin-bottom: 2vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+div.ranks-info h1 {
+    color: #FAFF00;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 footer {
+    position: relative;
     bottom: 0;
     margin-top: 15vw;
     padding-top: 10px;
@@ -457,8 +628,8 @@ p.mojang-info {
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    left: 30%;
-    margin-left: -60px;
+    left: 6vw;
+    margin-left: -2vw;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -471,7 +642,7 @@ p.mojang-info {
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 6vw;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;

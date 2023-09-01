@@ -2,7 +2,7 @@
 const cards = document.getElementsByClassName("move-card");
 const buttons = document.getElementsByClassName("move-card-button");
 
-let cardIndex = 0;
+let cardIndex = 1;
 let blocked = false;
 
 hideAllCards();
@@ -18,7 +18,7 @@ let update = setInterval(() => {
     } else {
         blocked = false;
     }
-}, 10000);
+}, 5000);
 
 for(let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", () => {
