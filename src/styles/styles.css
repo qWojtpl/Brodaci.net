@@ -41,17 +41,22 @@ nav {
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(218, 218, 218, 0.25) 100%);
     box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.1);
     width: 100vw;
-    height: 13vh;
+    height: 6.5vw;
     text-transform: uppercase;
     font-size: 1.8vw;
     color: black;
     z-index: 2;
 }
 
-nav img {
-    width: 13vh;
-    left: 5vw;
+#nav-image {
+    width: 6.5vw;
+    height: 13vw;
     position: absolute;
+    left: 5vw;
+}
+
+nav img {
+    width: 6.5vw;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
@@ -74,91 +79,14 @@ nav a {
 nav #shop-button > span {
     color: white;
     background-color: #00D2FF;
-    padding: 1vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 0.75vw;
+    padding-bottom: 0.75vw;
     padding-left: 3vw;
     padding-right: 3vw;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
     text-shadow: -2px 2px 3px #000000;
-    border-radius: 280px;
+    border-radius: 14.5vw;
     font-size: 2.1vw;
-}
-
-.burger {
-    display: none;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 1200px) {
-
-    nav.opened {
-        text-align: center;
-        height: 100vh;
-        background-color: white;
-    }
-
-    #nav-image {
-        width: 100vw;
-        height: 13vw;
-        text-align: center;
-        margin-bottom: 3vh;
-    }
-
-    nav img {
-        position: relative;
-        margin-left: 46.75vw;
-        left: 0;
-    }
-
-    nav.opened img {
-        position: relative !important;
-        left: 0 !important; 
-        margin-left: 0;
-    }
-
-    #nav-buttons {
-        display: none;
-    }
-
-    nav.opened #nav-buttons {
-        display: block;
-        left: 0;
-    }
-
-    nav.opened a {
-        display: block;
-        width: 100vw;
-        margin-bottom: 5vh;
-    }
-
-    .burger {
-        display: block;
-        position: absolute;
-        background-color: black;
-        right: 2vw;
-        width: 5vh;
-        height: 5vh;
-        top: 4vh;  
-    }
-
-    .burger-cross {
-        display: none;
-        position: absolute;
-        background-color: red;
-        right: 2vw;
-        width: 5vh;
-        height: 5vh;
-        top: 4vh;
-    }
-
-    nav.opened .burger {
-        display: none;
-    }
-
-    nav.opened .burger-cross {
-        display: block;
-    }
-
 }
 
 header {
@@ -214,11 +142,17 @@ td.td-line > div {
 }
 
 @-moz-document url-prefix() {
+
     .first-panels tbody tr td:nth-child(3) {
         width: 60vw;
         vertical-align: top;
         height: 100%;
     }
+
+    td.td-line {
+        height: 96.25vw;
+    }
+
 }
 
 .black-panel {
@@ -567,6 +501,7 @@ div.ranks-info h1 {
     color: #FAFF00;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 2.3vw;
 }
 
 footer {
