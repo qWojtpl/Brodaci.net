@@ -556,6 +556,64 @@ div.solid-white-panel p.small {
     font-size: 1.5vw;
 }
 
+div.staff-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 84vw;
+    gap: 3vw;
+}
+
+div.staff-record {
+    width: 25vw;
+    height: 15vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 2.6vw;
+    background: #00D2FF;
+    display: flex;
+}
+
+div.staff-image {
+    width: 10vw;
+    text-align: center;
+}
+
+div.staff-image img {
+    width: 8vw;
+    margin-top: 3vw;
+}
+
+div.staff-info {
+    width: 15vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    text-align: center;
+}
+
+div.staff-info h1 {
+    font-size: 2.5vw;
+    color: white;
+    text-transform: none;
+    text-shadow: -2px 2px 0px #000000;
+}
+
+div.staff-info span {
+    font-size: 1.8vw;
+    text-transform: uppercase;
+}
+
+div.staff-info span.red {
+    color: red;
+}
+
+div.staff-info span.orange {
+    color: #F8A400;
+}
+
+div.staff-info span.green {
+    color: #08852B;
+}
 
 footer {
     position: relative;
