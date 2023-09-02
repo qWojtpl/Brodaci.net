@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Brodaci.net - @pageTitle</title>
+        <title>Brodaci.net - Tryby - Survival</title>
         <link rel="stylesheet" href="./src/styles/styles.css">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <script>
-          window.history.replaceState(null, document.title, "./@contentName");
+          let contentName = "modes;survival";
+          contentName = contentName.replace(";", "/");
+          window.history.replaceState(null, document.title, "./" + contentName);
         </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </head>
     <body>
         <nav>
-          <div id="nav-image">
-            <a href="./index"><img src="./src/assets/logo_biale.png"></a>
-          </div>
-          <div id="nav-buttons">
-              <a href="./index">Główna</a>
-              <a href="./modes">Tryby</a>
-              <a href="./voting">Głosowanie</a>
-              <a href="./staff">Administracja</a>
-              <a href="./rules">Regulamin</a>
-              <a href="./contact">Kontakt</a>
-              <a href="http://sklep.brodaci.net/server/brodacinet" id="shop-button">
-                  <span>Sklep</span>
-              </a>
-          </div>
+            <img src="./src/assets/logo_biale.png">
+            <div id="nav-buttons">
+                <a href="./index">Główna</a>
+                <a href="./modes">Tryby</a>
+                <a href="./voting">Głosowanie</a>
+                <a href="./staff">Administracja</a>
+                <a href="./rules">Regulamin</a>
+                <a href="./contact">Kontakt</a>
+                <a id="shop-button">
+                    <span>Sklep</span>
+                </a>
+            </div>
         </nav>
-        <div id="background" style="background-image:url('./src/assets/@backgroundImage')"></div>
+        <div id="background" style="background-image:url('./src/assets/grass.png')"></div>
         <div id="content">
-            @pageContent
+            
+
+
+<section>
+    <header>Dostępne tryby</header> 
+</section>
         </div>
         <footer>
           <div id="footer-info">
             <div>
-              <a href="./index">
+              <a href="/">
                 <img src="./src/assets/logo_czarne.png">
             </div>
             <div>

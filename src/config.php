@@ -4,6 +4,6 @@
     $DB_LOGIN = "root";
     $DB_PASSWORD = "";
     $DB_DATABASE = "page";
-    $CACHE_EXPIRY = "10"
+    $CACHE_EXPIRY = "10";
 
 ?>

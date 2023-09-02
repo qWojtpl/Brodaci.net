@@ -1,26 +1,31 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Brodaci.net - Tryby</title>
         <link rel="stylesheet" href="./src/styles/styles.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <script>
-          window.history.replaceState(null, document.title, "./modes")
+          window.history.replaceState(null, document.title, "./modes");
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </head>
     <body>
         <nav>
-            <img src="./src/assets/logo_biale.png">
-            <div id="nav-buttons">
-                <a href="./">Główna</a>
-                <a href="./modes">Tryby</a>
-                <a href="./voting">Głosowanie</a>
-                <a href="./staff">Administracja</a>
-                <a href="./rules">Regulamin</a>
-                <a href="./contact">Kontakt</a>
-                <a id="shop-button">
-                    <span>Sklep</span>
-                </a>
-            </div>
+          <div id="nav-image">
+            <a href="./index"><img src="./src/assets/logo_biale.png"></a>
+          </div>
+          <div id="nav-buttons">
+              <a href="./index">Główna</a>
+              <a href="./modes">Tryby</a>
+              <a href="./voting">Głosowanie</a>
+              <a href="./staff">Administracja</a>
+              <a href="./rules">Regulamin</a>
+              <a href="./contact">Kontakt</a>
+              <a href="http://sklep.brodaci.net/server/brodacinet" id="shop-button">
+                  <span>Sklep</span>
+              </a>
+          </div>
         </nav>
         <div id="background" style="background-image:url('./src/assets/grass.png')"></div>
         <div id="content">
@@ -29,35 +34,59 @@
 
 <section>
     <header>Dostępne tryby</header>
+    <a href="./modes-survival">
+        <div class="gray-card big-gray-card">
+            <div class="gray-card-image" style="background-image:url(./src/assets/S1W.png)"></div>
+            <div class="gray-card-content">
+                <h2>Survival</h2>
+                <span>KLIKNIJ I DOWIEDZ SIĘ WIĘCEJ!</span>
+            </div>
+        </div>
+    </a>
+    <a href="./modes-easy">
+        <div class="gray-card big-gray-card">
+            <div class="gray-card-image" style="background-image:url(./src/assets/E1W.png)"></div>
+            <div class="gray-card-content">
+                <h2>Easy</h2>
+                <span>KLIKNIJ I DOWIEDZ SIĘ WIĘCEJ!</span>
+            </div>
+        </div>
+    </a>
+    <a href="./modes-new">
+        <div class="gray-card big-gray-card">
+            <div class="gray-card-image" style="background-image:url(./src/assets/moon.png)"></div>
+            <div class="gray-card-content">
+                <h2>Nowy tryb</h2>
+                <span>KLIKNIJ I DOWIEDZ SIĘ WIĘCEJ!</span>
+            </div>
+        </div>
+    </a>
 </section>
         </div>
         <footer>
-            <table>
-              <tr>
-                <td>
-                  <a href="/">
-                    <img src="./src/assets/logo_czarne.png">
-                  </a>
-                </td>
-                <td>
-                  <h5>Informacje</h5>
-                  <a href="#">Tryby</a><br>
-                  <a href="#">Regulamin</a><br>
-                  <a href="#">Administracja</a><br>
-                  <a href="#">Kontakt</a>
-                </td>
-                <td>
-                  <h5>Śledź nas</h5>
-                  <a href="#">TikTok</a><br>
-                  <a href="#">Facebook</a><br>
-                  <a href="#">Discord</a><br>
-                  <a href="#">Instagram</a>
-                </td>
-              </tr>
-            </table>
-            <br>
-            <p class="mojang-info">PL - Serwer Brodaci.net nie jest w żaden sposób powiązany z firmą Mojang i Microsoft. Serwer nie jest wspierany przez Mojang i Microsoft. Dochody ze sklepu przekazywane są na rzecz właściciela serwisu w celu utrzymania serwera.</p>
-            <p class="mojang-info">EN - Brodaci.net server is not associated with Mojang and Microsoft in any way. Server is not supported by Mojang and Microsoft. Income from the store is transferred to the service owner to maintain the server.</p>
-          </footer>
+          <div id="footer-info">
+            <div>
+              <a href="./index">
+                <img src="./src/assets/logo_czarne.png">
+            </div>
+            <div>
+              <h5>Informacje</h5>
+              <a href="./modes">Tryby</a><br>
+              <a href="./staff">Administracja</a><br>
+              <a href="./rules">Regulamin</a><br>
+              <a href="./contact">Kontakt</a>
+            </div>
+            <div>
+              <h5>Śledź nas</h5>
+              <a href="https://discord.com/invite/FmkCKJK" target="_blank">Discord</a><br>
+              <a href="ts3server://ts.brodaci.net" target="_blank">Teamspeak 3</a><br>
+              <a href="https://www.facebook.com/brodacinet" target="_blank">Facebook</a><br>
+              <a href="https://www.tiktok.com/@mc.brodaci.net" target="_blank">TikTok</a>
+            </div>
+          </div>
+          <br>
+          <p class="mojang-info">PL - Serwer Brodaci.net nie jest w żaden sposób powiązany z firmą Mojang i Microsoft. Serwer nie jest wspierany przez Mojang i Microsoft. Dochody ze sklepu przekazywane są na rzecz właściciela serwisu w celu utrzymania serwera.</p>
+          <p class="mojang-info">EN - Brodaci.net server is not associated with Mojang and Microsoft in any way. Server is not supported by Mojang and Microsoft. Income from the store is transferred to the service owner to maintain the server.</p>
+        </footer>
     </body>
 </html>

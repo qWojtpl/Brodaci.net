@@ -1,28 +1,31 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Brodaci.net - Strona główna</title>
         <link rel="stylesheet" href="./src/styles/styles.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <script>
-          let contentName = "index";
-          contentName = contentName.replace(";", "/");
-          window.history.replaceState(null, document.title, "./" + contentName);
+          window.history.replaceState(null, document.title, "./index");
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </head>
     <body>
         <nav>
-            <img src="./src/assets/logo_biale.png">
-            <div id="nav-buttons">
-                <a href="./">Główna</a>
-                <a href="./modes">Tryby</a>
-                <a href="./voting">Głosowanie</a>
-                <a href="./staff">Administracja</a>
-                <a href="./rules">Regulamin</a>
-                <a href="./contact">Kontakt</a>
-                <a id="shop-button">
-                    <span>Sklep</span>
-                </a>
-            </div>
+          <div id="nav-image">
+            <a href="./index"><img src="./src/assets/logo_biale.png"></a>
+          </div>
+          <div id="nav-buttons">
+              <a href="./index">Główna</a>
+              <a href="./modes">Tryby</a>
+              <a href="./voting">Głosowanie</a>
+              <a href="./staff">Administracja</a>
+              <a href="./rules">Regulamin</a>
+              <a href="./contact">Kontakt</a>
+              <a href="http://sklep.brodaci.net/server/brodacinet" id="shop-button">
+                  <span>Sklep</span>
+              </a>
+          </div>
         </nav>
         <div id="background" style="background-image:url('./src/assets/L1W.png')"></div>
         <div id="content">
@@ -31,47 +34,96 @@
 
 <section>
     <table class="first-panels">
-        <tr>
-            <td>
-                <div class="black-panel">
-                    <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/ip.png"></span>
-                        Adres IP: brodaci.net
-                    </span>
-                    <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/web.png"></span>
-                        150 graczy online
-                    </span>
-                    <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/block.png"></span>
-                        Wersje 1.19.1-1.19.4
-                    </span>
-                    <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/discord.png"></span>
-                        Discord
-                    </span>
-                    <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/teamspeak.png"></span>
-                        Teamspeak 3
-                    </span>
-                    <span class="circle-span">
-                        <span class="circle"><img src="./src/assets/tiktok.png"></span>
-                        TikTok
-                    </span>
-                </div>
-            </td>
-            <td>
-                <div></div>
-            </td>
-            <td>
-                <div class="black-panel">
-                    <h1>DOŁĄCZ I ZAGRAJ Z NAMI NA BRODACI.NET</h1>
-                    <span>
-                        Brodaci.net to serwer z długą historią, fantastyczną społecznością, nowym pokoleniem administracyjnym. Naszym celem jest zafundowanie naszym graczom długiej, ciekawej i przyjemnej gry. Wychodząc wam naprzeciw nieustannie modernizujemy i ulepszamy serwer tak aby każdy znalazł coś dla siebie i znajomych. Wbijaj do nas i przekonaj się!
-                    </span>
-                </div>
-            </td>
-        </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="black-panel">
+                        <span class="circle-span">
+                            <div class="tooltip copyable" onclick="copy('brodaci.net');">
+                                <span class="circle"><img src="./src/assets/ip.png"></span>
+                                Adres IP: brodaci.net
+                                <div class="tooltip-text">
+                                    <span>Kliknij, aby skopiować!</span>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="circle-span">
+                            <div class="tooltip">
+                                <span class="circle"><img src="./src/assets/web.png"></span>
+                                <data id="server-players-online"></data> graczy online
+                                <div class="tooltip-text">
+                                    <span><data id="server-players-info"></data></span>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="circle-span">
+                            <div class="tooltip">
+                                <span class="circle"><img src="./src/assets/block.png"></span>
+                                Wersje: 1.19.1-1.19.4
+                                <div class="tooltip-text">
+                                    <span>Serwer działa na tych wersjach.</span>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="circle-span">
+                            <a href="https://discord.com/invite/FmkCKJK" target="_blank">
+                                <div class="tooltip">
+                                    <span class="circle"><img src="./src/assets/discord.png"></span>
+                                    Discord
+                                    <div class="tooltip-text">
+                                        <span>Kliknij, aby dołączyć!</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </span>
+                        <span class="circle-span">
+                            <a href="ts3server://ts.brodaci.net" target="_blank">
+                                <div class="tooltip">
+                                    <span class="circle"><img src="./src/assets/teamspeak.png"></span>
+                                    Teamspeak 3
+                                    <div class="tooltip-text">
+                                        <span>Kliknij, aby dołączyć!</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </span>
+                        <span class="circle-span">
+                            <a href="https://www.facebook.com/brodacinet" target="_blank">
+                                <div class="tooltip">
+                                    <span class="circle"><img src="./src/assets/facebook.png"></span>
+                                    Facebook
+                                    <div class="tooltip-text">
+                                        <span>Kliknij, aby przejść!</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </span>
+                        <span class="circle-span">
+                            <a href="https://www.tiktok.com/@mc.brodaci.net" target="_blank">
+                                <div class="tooltip">
+                                    <span class="circle"><img src="./src/assets/tiktok.png"></span>
+                                    TikTok
+                                    <div class="tooltip-text">
+                                        <span>Kliknij, aby przejść!</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </span>
+                    </div>
+                </td>
+                <td class="td-line">
+                    <div></div>
+                </td>
+                <td>
+                    <div class="black-panel">
+                        <h1>DOŁĄCZ I ZAGRAJ Z NAMI NA BRODACI.NET</h1>
+                        <span>
+                            Brodaci.net to serwer z długą historią, fantastyczną społecznością, nowym pokoleniem administracyjnym. Naszym celem jest zafundowanie naszym graczom długiej, ciekawej i przyjemnej gry. Wychodząc wam naprzeciw nieustannie modernizujemy i ulepszamy serwer tak aby każdy znalazł coś dla siebie i znajomych. Wbijaj do nas i przekonaj się!
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>    
     </table>
 </section>
 
@@ -195,9 +247,11 @@
             <h2>Survival</h2>
             <span>Jeśli interesuje Ciebie klasyczna rozgrywka, walki PVP, budowanie baz, ten tryb jest dla Ciebie! Zdobywaj, broń się i ulepszaj swój ekwipunek.</span>
         </div>
-        <button class="gray-card-button">
-            <span>Czytaj więcej ></span>
-        </button>
+        <a href="./modes-survival">
+            <button class="gray-card-button">
+                <span>Czytaj więcej ></span>
+            </button>
+        </a>
     </div>
     <div class="gray-card">
         <div class="gray-card-image" style="background-image:url(./src/assets/E1W.png)"></div>
@@ -205,9 +259,11 @@
             <h2>Survival Easy</h2>
             <span>Jeśli znudziły Ci się walki i przetrwanie mamy dla Ciebie idealny tryb do kreatywnej gry. Na Easy nie ma PVP, po śmierci zachowujesz swój ekwipunek oraz jest dostępny fly. Nic więcej nie potrzeba aby zacząć budować wielki projekt!</span>
         </div>
-        <button class="gray-card-button">
-            <span>Czytaj więcej ></span>
-        </button>
+        <a href="./modes-easy">
+            <button class="gray-card-button">
+                <span>Czytaj więcej ></span>
+            </button>
+        </a>
     </div>
     <div class="gray-card">
         <div class="gray-card-image" style="background-image:url(./src/assets/moon.png)"></div>
@@ -215,9 +271,11 @@
             <h2>Tutaj będzie nowy tryb</h2>
             <span>Tutaj za niedługo pojawi się nowy innowacyjny i w pełni autorski tryb. Śledź nas na Discordzie, Tik Toku, Facebooku aby być na bierząco i jako pierwszy dowiedzieć się o nowym trybie.</span>
         </div>
-        <button class="gray-card-button">
-            <span>Czytaj więcej ></span>
-        </button>
+        <a href="./modes-new">
+            <button class="gray-card-button">
+                <span>Czytaj więcej ></span>
+            </button>
+        </a>
     </div>
 </section>
 
@@ -282,41 +340,42 @@
         <div class="move-card-button"></div>
         <div class="move-card-button"></div>
         <div class="move-card-button"></div>
-        <div class="move-card-button-end">
-            <span>Przejdź do pełnej listy administracji</span>
-        </div>
+        <a href="./staff">
+            <div class="move-card-button-end">
+                <span>Przejdź do pełnej listy administracji</span>
+            </div>
+        </a>
     </div>
 </section>
 
 <script src="./src/scripts/move-cards.js"></script>
+<script src="./src/scripts/copy.js"></script>
+<script src="./src/scripts/server-players.js"></script>
         </div>
         <footer>
-            <table>
-              <tr>
-                <td>
-                  <a href="/">
-                    <img src="./src/assets/logo_czarne.png">
-                  </a>
-                </td>
-                <td>
-                  <h5>Informacje</h5>
-                  <a href="#">Tryby</a><br>
-                  <a href="#">Regulamin</a><br>
-                  <a href="#">Administracja</a><br>
-                  <a href="#">Kontakt</a>
-                </td>
-                <td>
-                  <h5>Śledź nas</h5>
-                  <a href="#">TikTok</a><br>
-                  <a href="#">Facebook</a><br>
-                  <a href="#">Discord</a><br>
-                  <a href="#">Instagram</a>
-                </td>
-              </tr>
-            </table>
-            <br>
-            <p class="mojang-info">PL - Serwer Brodaci.net nie jest w żaden sposób powiązany z firmą Mojang i Microsoft. Serwer nie jest wspierany przez Mojang i Microsoft. Dochody ze sklepu przekazywane są na rzecz właściciela serwisu w celu utrzymania serwera.</p>
-            <p class="mojang-info">EN - Brodaci.net server is not associated with Mojang and Microsoft in any way. Server is not supported by Mojang and Microsoft. Income from the store is transferred to the service owner to maintain the server.</p>
-          </footer>
+          <div id="footer-info">
+            <div>
+              <a href="./index">
+                <img src="./src/assets/logo_czarne.png">
+            </div>
+            <div>
+              <h5>Informacje</h5>
+              <a href="./modes">Tryby</a><br>
+              <a href="./staff">Administracja</a><br>
+              <a href="./rules">Regulamin</a><br>
+              <a href="./contact">Kontakt</a>
+            </div>
+            <div>
+              <h5>Śledź nas</h5>
+              <a href="https://discord.com/invite/FmkCKJK" target="_blank">Discord</a><br>
+              <a href="ts3server://ts.brodaci.net" target="_blank">Teamspeak 3</a><br>
+              <a href="https://www.facebook.com/brodacinet" target="_blank">Facebook</a><br>
+              <a href="https://www.tiktok.com/@mc.brodaci.net" target="_blank">TikTok</a>
+            </div>
+          </div>
+          <br>
+          <p class="mojang-info">PL - Serwer Brodaci.net nie jest w żaden sposób powiązany z firmą Mojang i Microsoft. Serwer nie jest wspierany przez Mojang i Microsoft. Dochody ze sklepu przekazywane są na rzecz właściciela serwisu w celu utrzymania serwera.</p>
+          <p class="mojang-info">EN - Brodaci.net server is not associated with Mojang and Microsoft in any way. Server is not supported by Mojang and Microsoft. Income from the store is transferred to the service owner to maintain the server.</p>
+        </footer>
     </body>
 </html>

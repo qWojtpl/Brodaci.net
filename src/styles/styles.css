@@ -7,6 +7,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -23,7 +24,7 @@ a:hover {
 }
 
 #background {
-    width: 98.9vw;
+    width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,7 +106,7 @@ header.header-left {
 }
 
 #content {
-    margin-top: 18vh;
+    margin-top: 9vw;
 }
 
 .first-panels {
@@ -473,6 +474,12 @@ div.white-content-panel h1 {
     text-shadow: -2px 2px 3px #000000;
 }
 
+div.white-content-panel-middle {
+    width: 84vw;
+    margin-left: 5vw;
+    margin-bottom: 1.5vw;
+}
+
 div.ranks-info-container {
     margin-top: 3vw;
     width: 100%;
@@ -504,6 +511,52 @@ div.ranks-info h1 {
     font-size: 2.3vw;
 }
 
+div.solid-white-panel {
+    width: 84vw;
+    margin-lefT: 5vw;
+    min-height: 3vw;
+    height: fit-content;
+    background: #ECECEC;
+    border-radius: 2.6vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5), inset 1px -5px 2px 1px rgba(0, 0, 0, 0.25);
+    font-size: 1.3vw;
+    padding: 3vw;
+    line-height: 2.3vw;
+}
+
+div.solid-white-panel b {
+    color: black;
+    font-weight: normal;
+}
+
+div.solid-white-panel h1 {
+    font-size: 3.9vw;
+    color: #00D2FF;
+    text-shadow: -2px 2px 4px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.solid-white-panel h2 {
+    font-size: 2.3vw;
+    color: black;
+}
+
+div.solid-white-panel p, div.solid-white-panel li {
+    color: rgba(57, 57, 57, 0.8);
+}
+
+div.solid-white-panel p.center {
+    text-align: center;
+}
+
+div.solid-white-panel p.small {
+    color: rgb(255, 236, 236);
+    text-shadow: -3px 2px 8px rgba(0, 0, 0, 1);
+    font-size: 1.5vw;
+}
+
+
 footer {
     position: relative;
     bottom: 0;
@@ -513,7 +566,7 @@ footer {
     width: 100%;
     max-height: 100%;
     height: fit-content;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 1.2vw 1.2vw 0px 0px;
     background-color: white;
     font-size: 1.5vw;
 }
@@ -538,7 +591,7 @@ footer table td:nth-child(1) {
     text-align: center;
 }
 
-footer a:hover {
+footer a:hover, .solid-white-panel a:hover {
     color: gray;
 }
 
