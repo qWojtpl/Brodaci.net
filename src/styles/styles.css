@@ -342,6 +342,7 @@ button.gray-card-button {
     font-size: 1.3vw;
     text-shadow: -2px 2px 3px #000000;
     text-wrap: nowrap;
+    cursor: pointer;
 }
 
 div.big-gray-card .gray-card-content {
@@ -613,6 +614,10 @@ div.staff-info span.orange {
 
 div.staff-info span.green {
     color: #08852B;
+}
+
+div.staff-info span.light-green {
+    color: #2dd25c;
 }
 
 footer {
