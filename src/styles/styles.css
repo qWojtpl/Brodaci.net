@@ -568,6 +568,15 @@ div.staff-record {
     display: flex;
 }
 
+div.staff-ambassadors {
+    width: 84vw;
+    height: 35vw;
+    background-image: url("../assets/ambassadors.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
 div.staff-image {
     width: 10vw;
     text-align: center;
